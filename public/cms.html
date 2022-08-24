@@ -1,0 +1,46 @@
+<form ng-submit="submit()" ng-controller="ColorMatchSystemController">
+    <div class="row">
+        <div class="col-md-12" style="text-align: center">
+            <img src="images/ink.png" alt="Inkcraft" class="img-responsive center-block"
+                 style="max-height:350px; max-width:350px"/>
+            <h4>Color Matching System</h4>
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-offset-4 col-md-4 col-md-offset-4">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Enter PMS# or colour" ng-model="pms">
+                <span class="input-group-addon" id="basic-addon1">
+                    <span class="glyphicon glyphicon-tint"></span>
+                </span>
+            </div><!-- /input-group -->
+        </div>
+    </div>
+    <div class="row top-buffer">
+        <div class="col-md-offset-4 col-md-4 col-md-offset-4">
+
+            <label>Ink series  </label>
+            <div class="btn-group">
+                <label class="btn btn-default btn-lg" ng-model="radioModel" uib-btn-radio="'NW'" id="nw">NW</label>
+                <label class="btn btn-default btn-lg" ng-model="radioModel" uib-btn-radio="'PI'" id="pi">PI</label>
+                <label class="btn btn-default btn-lg" ng-model="radioModel" uib-btn-radio="'EX-LO'" id="exlo">EX-LO</label>
+                <label class="btn btn-default btn-lg" ng-model="radioModel" uib-btn-radio="'MXO'" id="mxo">MXO</label>
+                <label class="btn btn-default btn-lg" ng-model="radioModel" uib-btn-radio="'SI'" id="si">SPI</label>
+            </div>
+
+        </div>
+    </div>
+    <div class="row top-buffer">
+    <div class="col-md-offset-4 col-md-4 col-md-offset-4">
+            <div class="input-group">
+                <input type="number" step=any class="form-control" placeholder="Enter desired quantity" aria-describedby="sizing-addon1" ng-model="quantity">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default disabled" aria-label="Help">Grams</button>
+                    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"> Search</span></button>
+                </div>
+            </div>
+<!--        </div>&lt;!&ndash; /input-group &ndash;&gt;-->
+    </div>
+</div>
+</form>
+

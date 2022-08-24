@@ -1,0 +1,79 @@
+<div ng-controller="AllPmsController">
+    <div class="row">
+        <div class="col-md-12" style="text-align: center">
+<!--            <p ng-repeat="pmsEntry in pmsEntries">{{pmsEntry.description}} test {{pmsEntry.pms_number}}</p>-->
+            <table class="table table-condensed table-bordered table-striped" style="width:100%">
+                <tr>
+                    <th>Description</th>
+                    <th>series</th>
+                    <th>PMS number</th>
+                    <th>component1</th>
+                    <th>quantity1</th>
+                    <th>component2</th>
+                    <th>quantity2</th>
+                    <th>component3</th>
+                    <th>quantity3</th>
+                    <th>component4</th>
+                    <th>quantity4</th>
+                    <th>component5</th>
+                    <th>quantity5</th>
+                    <th>component6</th>
+                    <th>quantity6</th>
+                    <th>component7</th>
+                    <th>quantity7</th>
+                    <th>component8</th>
+                    <th>quantity8</th>
+                    <th>component9</th>
+                    <th>quantity9</th>
+                    <th>component10</th>
+                    <th>quantity10</th>
+                    <th>component11</th>
+                    <th>quantity11</th>
+                    <th>component12</th>
+                    <th>quantity12</th>
+                    <th>component13</th>
+                    <th>quantity13</th>
+                    <th>component14</th>
+                    <th>quantity14</th>
+                    <th>component15</th>
+                    <th>quantity15</th>
+                </tr>
+                <tr ng-repeat="pmsEntry in pmsEntries">
+                    <th>{{pmsEntry.description}} <a href="#/editPmsEntry/{{pmsEntry.pms_number}}/{{pmsEntry.series}}" id="viewPMSLink" class="btn btn-default btn-xs">Edit PMS</a></th>
+                    <td>{{pmsEntry.series === 'SI' ? 'SPI' : pmsEntry.series}}</td>
+                    <td>{{pmsEntry.pms_number}}</td>
+                    <td>{{pmsEntry.component1}}</td>
+                    <td>{{pmsEntry.quantity1}}</td>
+                    <td>{{pmsEntry.component2}}</td>
+                    <td>{{pmsEntry.quantity2}}</td>
+                    <td>{{pmsEntry.component3}}</td>
+                    <td>{{pmsEntry.quantity3}}</td>
+                    <td>{{pmsEntry.component4}}</td>
+                    <td>{{pmsEntry.quantity4}}</td>
+                    <td>{{pmsEntry.component5}}</td>
+                    <td>{{pmsEntry.quantity5}}</td>
+                    <td>{{pmsEntry.component6}}</td>
+                    <td>{{pmsEntry.quantity6}}</td>
+                    <td>{{pmsEntry.component7}}</td>
+                    <td>{{pmsEntry.quantity7}}</td>
+                    <td>{{pmsEntry.component8}}</td>
+                    <td>{{pmsEntry.quantity8}}</td>
+                    <td>{{pmsEntry.component9}}</td>
+                    <td>{{pmsEntry.quantity9}}</td>
+                    <td>{{pmsEntry.component10}}</td>
+                    <td>{{pmsEntry.quantity10}}</td>
+                    <td>{{pmsEntry.component11}}</td>
+                    <td>{{pmsEntry.quantity11}}</td>
+                    <td>{{pmsEntry.component12}}</td>
+                    <td>{{pmsEntry.quantity12}}</td>
+                    <td>{{pmsEntry.component13}}</td>
+                    <td>{{pmsEntry.quantity13}}</td>
+                    <td>{{pmsEntry.component14}}</td>
+                    <td>{{pmsEntry.quantity14}}</td>
+                    <td>{{pmsEntry.component15}}</td>
+                    <td>{{pmsEntry.quantity15}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

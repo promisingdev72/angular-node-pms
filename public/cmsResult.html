@@ -1,0 +1,55 @@
+<style media="print">
+    @page {
+        size: auto;
+        margin: 0;
+    }
+
+    @media print{
+        #footer{
+            position: absolute;
+            bottom: 125px;
+            height: 2.5rem;            /* Footer height */
+        }
+    }
+</style>
+
+<div ng-controller="ColorResultController">
+    <div class="row">
+        <div class="col-md-12" style="text-align: center">
+            <img src="images/ink.png" alt="Inkcraft" class="img-responsive center-block" id="inkcraftLogoPms"
+                 style="max-height:350px; max-width:350px"/>
+            <h4>Colour match formula</h4>
+            <div class="btn btn-default btn-lg hidden-print" onclick="window.print()">
+                <span class="glyphicon glyphicon-print" aria-hidden="true"></span> Print this page
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="text-align: center">
+            <h2>{{data.description}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12" style="text-align: center">
+            <table style="margin-left:auto; margin-right:auto;">
+                <tr ng-repeat="component in data.components track by $index">
+                    <td class="tdComponentCell"><h4>{{component}}</h4></td>
+                    <td class="alignRight"><h4>{{data.quantities[$index] == 0 ? 'Fill if needed' : (data.quantities[$index] * userRatio).toFixed(2)}}</h4></td>
+                </tr>
+                <tr style="border-top: 1px solid black;">
+                    <td class="tdComponentCell"><h4>TOTAL:</h4></td>
+                    <td class="alignRight"><h4>{{data.userRequestQuantity}}</h4></td>
+                </tr>
+            </table>
+<!--            <a href="mailto:inkcraft@bellnet.ca?subject=Order%20request%20for%20{{data.description}}&body=-->
+<!--Hello%20Inkcraft,%0AWe%20would%20like%20to%20purcahse%20the%20following%20order:%0A">Click to request order from Inkcraft</a>-->
+<!--            <a href={{emailLink}}>Click to request order from Inkcraft</a>-->
+        </div>
+    </div>
+    <div id="footer" class="bottomPrint">
+        <hr/>
+        <h1 style="text-align: center;">{{data.description}}</h1>
+        <h5 style="text-align: center;">{{currentDate | date:'yyyy-MM-dd'}} &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp {{data.userRequestQuantity}} GRAMS</h5>
+        <h5 style="font-size:0.6em; text-align: center;">INKCRAFT CORPORATION * 110 CIDERMILL AVENUE B-1 CONCORD, ONTARIO CANADA * Tel:(905) 738-3963 * (800)387-INKS(4657) * E-mail: inkcraft@bellnet.ca * Web: inkcraft.ca</h5>
+    </div>
+</div>

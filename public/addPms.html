@@ -1,0 +1,159 @@
+<form  ng-submit="submit()" ng-controller="AddPmsController">
+    <div class="form-group">
+
+    <label>PMS Number or Colour  </label>
+    <input type="text" pattern=".{3,20}" required class="form-control" placeholder="Pms Number/ Colour (3 - 20 numbers/letters)" ng-change="validatePms()" ng-model="pms" ng-model-options="{ debounce: 1000 }">
+        <alert type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</alert>
+    </div>
+    <div class="form-group">
+        <label>PMS Colour full name</label>
+        <input type="text" class="form-control" placeholder="PMS Description" ng-model="description">
+    </div>
+    <div class="form-group">
+        <label>Paint series  </label>
+        <div class="btn-group">
+            <label class="btn btn-default btn-lg" ng-model="radioModel" ng-change="validatePms()" uib-btn-radio="'NW'">NW</label>
+            <label class="btn btn-default btn-lg" ng-model="radioModel" ng-change="validatePms()" uib-btn-radio="'PI'">PI</label>
+            <label class="btn btn-default btn-lg" ng-model="radioModel" ng-change="validatePms()" uib-btn-radio="'EX-LO'">EX-LO</label>
+            <label class="btn btn-default btn-lg" ng-model="radioModel" ng-change="validatePms()" uib-btn-radio="'MXO'">MXO</label>
+<!--            Properly change SI to SPI in database after testing safety of operation-->
+            <label class="btn btn-default btn-lg" ng-model="radioModel" ng-change="validatePms()" uib-btn-radio="'SI'" id="si">SPI</label>
+        </div>
+    </div>
+        <div class="form-group">
+
+            <label>Component 1:</label>
+            <select class="form-control" ng-model="params.component1">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity1">
+        </div>
+        <div class="form-group">
+
+            <label>Component 2:</label>
+            <select ng-model="params.component2" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity2">
+        </div>
+        <div class="form-group">
+            <label>Component 3:</label>
+            <select ng-model="params.component3" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity3">
+        </div>
+        <div class="form-group">
+
+        <label>Component 4:</label>
+            <select ng-model="params.component4" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity4">
+        </div>
+        <div class="form-group">
+
+        <label>Component 5:</label>
+            <select ng-model="params.component5" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity5">
+        </div>
+        <div class="form-group">
+
+            <label>Component 6:</label>
+            <select ng-model="params.component6" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity6">
+        </div>
+        <div class="form-group">
+
+
+        <label>Component 7:</label>
+            <select ng-model="params.component7" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity7">
+        </div>
+        <div class="form-group">
+
+        <label>Component 8:</label>
+            <select ng-model="params.component8" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity8">
+        </div>
+        <div class="form-group">
+
+        <label>Component 9:</label>
+            <select ng-model="params.component9" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity9">
+        </div>
+        <div class="form-group">
+        <label>Component 10:</label>
+            <select ng-model="params.component10" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity10">
+        </div>
+        <div class="form-group">
+
+        <label>Component 11:</label>
+            <select ng-model="params.component11" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity11">
+        </div>
+        <div class="form-group">
+
+            <label>Component 12:</label>
+            <select ng-model="params.component12" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity12">
+        </div>
+        <div class="form-group">
+
+        <label>Component 13:</label>
+            <select ng-model="params.component13" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity13">
+        </div>
+        <div class="form-group">
+
+        <label>Component 14:</label>
+            <select ng-model="params.component14" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity14">
+        </div>
+        <div class="form-group">
+
+        <label>Component 15:</label>
+            <select ng-model="params.component15" class="form-control">
+                <option value="">Select paint component</option>
+                <option ng-repeat="pmsComp in paintColors" value="{{pmsComp.abvr}}">{{pmsComp.component}}</option>
+            </select>
+            <input type="number" class="form-control" placeholder="Amount in grams" ng-model="quantity15">
+        </div>
+    <button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-plus"> Submit PMS entry</span></button>
+</form>

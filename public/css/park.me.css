@@ -1,0 +1,200 @@
+input.destination
+{
+	width: 100%;
+	max-width: 500px;
+	display: inline-block;
+	margin-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+}
+
+.icon
+{
+	margin-top: 5px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	vertical-align: top;
+}
+
+body 
+{	
+    padding-top: 70px;
+}
+
+div
+{
+	margin: 0;
+	padding: 0;
+}
+
+body, html
+{
+	height: 100%;
+    margin: 0px;
+}
+
+li.point
+{
+	font-size: 1.3em;
+}
+
+#dimmer
+{
+	display: none;
+	z-index: 99;
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+
+#postbox
+{
+	position: relative;
+    display: none;
+	z-index: 100;
+}
+
+div.popup
+{
+	width: 400px;
+	max-width: 95%;
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.center-block
+{
+	width: 95%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#splash
+{
+	width: 100%;
+	height: 100%;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../images/logo_high_res.png");
+	background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: top center;
+	opacity: 0.5;
+}
+
+.titleHeading {
+	font-size: 50px;
+}
+
+.subHeadings {
+	font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-size: 25px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 700;
+	cursor:pointer;
+	text-decoration:none;
+	color: inherit;
+	line-height: 1.5em;
+}
+
+.popover-content {
+	font-size: 17px;
+}
+
+#footer {
+	          /* Footer height */
+}
+
+.alignRight {
+	text-align: right;
+	padding:0 0 0 50px;
+}
+
+.tdComponentCell {
+	text-align: right;
+}
+
+textarea.info-text
+{
+	overflow-y: scroll;
+}
+
+.filt
+{
+	min-width: 100%;
+}
+
+.width-50
+ {
+	width: 44%;
+}
+
+.width-90 
+{
+	width: 90%;
+}
+
+@media (max-width: 992px) 
+{
+	.hide-on-mobile 
+	{
+		display: none;
+	}
+}
+
+.logo
+{
+	height: 115%;
+}
+
+div.parking-spots
+{
+	 margin: 15px;
+	 padding: 10px; 
+	 border: 1px solid #000000;
+}
+
+.top-buffer { margin-top:20px; }
+
+@media (max-width: 991px) {
+	.btn-group.my-btn-group-responsive > .btn {
+		display: block;
+		width: 100%;
+	}
+
+	/* making the border-radius correct */
+	.btn-group.my-btn-group-responsive > .btn:first-child {
+		border-radius: 6px 6px 0 0;
+	}
+	.btn-group.my-btn-group-responsive > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+		border-top-right-radius: 6px;
+	}
+	.btn-group.my-btn-group-responsive > .btn:last-child:not(:first-child) {
+		border-radius: 0 0 6px 6px;
+	}
+
+	/* fixing margin */
+	.btn-group.my-btn-group-responsive .btn + .btn {
+		margin-left: 0;
+	}
+
+}
+
+@media print {
+	#inkcraftLogoPms {
+		width: 150px;
+		height: 150px;
+	}
+}

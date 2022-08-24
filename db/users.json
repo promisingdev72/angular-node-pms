@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "_id": 1,
+      "username": "sadclown",
+      "password": "encryptlater",
+      "email": "sadclown@clowns.com",
+      "first": "Sad",
+      "last": "Clown",
+      "spots": [
+        1,
+        3,
+        5,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "_id": 2,
+      "username": "cps630_overlord",
+      "password": "encryptlater2",
+      "email": "hisemail@places.com",
+      "first": "Nhan",
+      "last": "Tran",
+      "spots": [
+        2
+      ]
+    },
+    {
+      "_id": 3,
+      "username": "sadclown2",
+      "password": "encryptlater3",
+      "email": "Sadclown@hotmail.ca",
+      "first": "Jeff",
+      "last": "Jefferson",
+      "spots": [
+        8
+      ]
+    },
+    {
+      "_id": 4,
+      "username": "new_user",
+      "password": "encryptlater4",
+      "email": "newusersemail@gmail.com",
+      "first": "",
+      "last": "",
+      "spots": [
+        4
+      ]
+    },
+    {
+      "_id": 5,
+      "username": "mrpotatohead",
+      "password": "applesandbees",
+      "email": "mrpotatohead@hotmail.com",
+      "first": "Mr",
+      "last": "Potato",
+      "spots": []
+    },
+    {
+      "_id": 6,
+      "username": "bobthebuilder",
+      "password": "bobspassword",
+      "email": "bobthebuilder@gmail.com",
+      "first": "Bob",
+      "last": "The Damn Builder",
+      "spots": []
+    },
+    {
+      "_id": 7,
+      "username": "test",
+      "password": "tttttt",
+      "email": "fesaes@fdsf.com",
+      "first": "ff",
+      "last": "",
+      "spots": []
+    },
+    {
+      "_id": 8,
+      "username": "tttttt",
+      "password": "tttttt",
+      "email": "tttttt@tttt.com",
+      "first": "",
+      "last": "",
+      "spots": []
+    }
+  ]
+}
